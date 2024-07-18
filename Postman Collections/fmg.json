@@ -56,18 +56,24 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "psfjahripen4giixh34et5hg3a7ocqzr"
+					}
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": 1,\n    \"method\": \"exec\",\n    \"params\": [\n        {\n            \"data\": {\n                \"adom\": \"root\",\n                \"device\": {\n                    \"desc\": \"hub01\"\n                    \"device action\": \"add_model\",\n                    \"mr\": 0,\n                    \"name\": \"hub01\",\n                    \"os_type\": \"fos\",\n                    \"os_ver\": \"7.0\",\n                    \"patch\": 0,\n                    \"platform_str\": \"FortiGate-VM64\",\n                    \"sn\": \"FGVM01TM23003802\",\n                    \"mgmt_mod\":\"fmg\"\n                },\n            },\n            \"url\": \"/dvm/cmd/add/device\"\n        }\n    ],\n    \"session\": \"xnaBXmtmXk3Dt1fXKdXJpP+pOWaBT5YUoL8r0rrk9CodczHSyOcqpoGNmMNBXaIoaIBlGmi4WLOTJMzLO+6f9A==\"\n}",
+					"raw": "{\n    \"id\": 1,\n    \"method\": \"exec\",\n    \"params\": [\n        {\n            \"data\": {\n                \"adom\": \"root\",\n                \"device\": {\n                    \"device action\": \"add_model\",\n                    \"mr\": 0,\n                    \"name\": \"test444\",\n                    \"os_type\": \"fos\",\n                    \"os_ver\": \"7.0\",\n                    \"patch\": 0,\n                    \"platform_str\": \"FortiGate-VM64\",\n                    \"sn\": \"FGVM01TM2300444\",\n                    \"mgmt_mod\":\"fmg\"\n                },\n            },\n            \"url\": \"/dvm/cmd/add/device\"\n        }\n    ],\n}",
 					"options": {
 						"raw": {
 							"language": "json"
 						}
 					}
 				},
-				"url": "https://192.168.68.10/jsonrpc"
+				"url": "https://192.168.205.253/jsonrpc"
 			},
 			"response": []
 		},
