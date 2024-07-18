@@ -103,8 +103,42 @@
 				"disableBodyPruning": true
 			},
 			"request": {
-				"method": "GET",
-				"header": []
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "psfjahripen4giixh34et5hg3a7ocqzr"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 3,\n  \"method\": \"get\",\n  \"params\": [\n    {\n        \"loadsub\": 0,\n        \"url\": \"/dvmdb/device\"\n    }\n  ],\n  \"verbose\": 1\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.68.10/jsonrpc?access_token=dza3tkpajb6ajgut8jii69d5cayyc1hp",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"68",
+						"10"
+					],
+					"path": [
+						"jsonrpc"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "dza3tkpajb6ajgut8jii69d5cayyc1hp"
+						}
+					]
+				}
 			},
 			"response": []
 		},
