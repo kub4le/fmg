@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "efdd3af6-8fd7-4d7c-89c3-128ece81e505",
+		"name": "FortiManager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Session ID",
+			"id": "7250a955-4ce9-4d83-b111-e2c36ef68d5c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"method\": \"exec\",\n    \"params\": [\n        {\n            \"data\": {\n                \"passwd\": \"fortinet\",\n                \"user\": \"admin\"\n            },\n            \"url\": \"/sys/login/user\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://192.168.68.10/jsonrpc"
+			},
+			"response": []
+		},
+		{
+			"name": "add real device",
+			"id": "522e2be0-11e0-450f-818d-875945c2bbbe",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"method\": \"exec\",\n    \"params\": [\n        {\n            \"data\": {\n                \"adom\": \"root\",\n                \"device\": {\n                  \"name\": \"hub01\",\n                  \"adm_pass\": \"fortinet\",\n                  \"adm_usr\": \"admin\",\n                  \"desc\": \"hub01 description\",\n                  \"ip\": \"192.168.68.4\",\n                  \"mgmt_mode\": \"fmg\"\n                },\n                \"flags\": [\n                    \"create_task\"\n                ]\n            },\n            \"url\": \"/dvm/cmd/add/device\"\n        }\n    ],\n    \"session\": \"PmvZ3E2/E4yeQnYLnmrgtuD+p914IOsiRqOuJMKpg7iftXnb54+WRcALKJ2HZskozJUcAFUs3hrkwivjjY4uFw==\",\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://192.168.68.10/jsonrpc"
+			},
+			"response": []
+		},
+		{
+			"name": "add model device",
+			"id": "3a37120d-a017-4ff0-a3f9-7d4a3bf93d5f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"method\": \"exec\",\n    \"params\": [\n        {\n            \"data\": {\n                \"adom\": \"root\",\n                \"device\": {\n                    \"desc\": \"hub01\"\n                    \"device action\": \"add_model\",\n                    \"mr\": 0,\n                    \"name\": \"hub01\",\n                    \"os_type\": \"fos\",\n                    \"os_ver\": \"7.0\",\n                    \"patch\": 0,\n                    \"platform_str\": \"FortiGate-VM64\",\n                    \"sn\": \"FGVM01TM23003802\",\n                    \"mgmt_mod\":\"fmg\"\n                },\n            },\n            \"url\": \"/dvm/cmd/add/device\"\n        }\n    ],\n    \"session\": \"xnaBXmtmXk3Dt1fXKdXJpP+pOWaBT5YUoL8r0rrk9CodczHSyOcqpoGNmMNBXaIoaIBlGmi4WLOTJMzLO+6f9A==\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://192.168.68.10/jsonrpc"
+			},
+			"response": []
+		},
+		{
+			"name": "Return all firewall addresses",
+			"id": "facc3c9b-8553-4c41-8512-d1d88e89e0bf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1\n  \"method\": \"get\",\n  \"params\": [\n    {\n        \"data\": {\n            \"passwd\": \"fortinet\",\n            \"user\": \"admin\"\n        },\n      \"url\": \"/pm/pkg/global\"\n    }\n  ],\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://192.168.68.10/jsonrpc"
+			},
+			"response": []
+		},
+		{
+			"name": "Get managed devices",
+			"id": "2dc09d96-1293-4438-abce-baf60c34cd60",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get ADOM",
+			"id": "e8add1fe-963c-4b64-b1d5-41f27cb68249",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "system status",
+			"id": "f756c6ea-9c92-41f2-aeaf-1938244450a0",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "satf9smcdxzjssssrnjycp76m9goz5b8"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"method\": \"get\",\n  \"params\": [\n    {\n      \"url\": \"/cli/global/system/global\"\n    }\n  ],\n  \"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://192.168.68.10/jsonrpc"
+			},
+			"response": []
+		}
+	]
+}
