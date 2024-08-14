@@ -72,7 +72,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 3,\n  \"method\": \"get\",\n  \"params\": [\n    {\n        \"loadsub\": 0,\n        \"url\": \"/dvmdb/device\"\n    }\n  ],\n  \"verbose\": 1\n}\n",
+					"raw": "{\n  \"id\": 3,\n  \"method\": \"get\",\n  \"params\": [\n    {\n        \"loadsub\": 0,\n        \"url\": \"/pm/config/adom/root/obj/fmg/variable/hostname/dynamic_mapping/hub01/global\"\n    }\n  ],\n  \"verbose\": 1\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -158,6 +158,34 @@
 					}
 				},
 				"url": "https://192.168.205.253/jsonrpc"
+			},
+			"response": []
+		},
+		{
+			"name": "set metadata",
+			"id": "e5bbb445-33a3-4e89-a0ee-f609fc8b644c",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{apikey}}"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 3,\n  \"method\": \"get\",\n  \"params\": [\n    {\n        \"loadsub\": 0,\n        \"url\": \"/dvmdb/device\"\n    }\n  ],\n  \"verbose\": 1\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://{{fmgip}}/jsonrpc"
 			},
 			"response": []
 		},
