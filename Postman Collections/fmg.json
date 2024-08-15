@@ -169,7 +169,8 @@
 					"script": {
 						"id": "44dc6531-6c8f-41de-b9e6-001bbad06ff5",
 						"exec": [
-							"pm.variables.set(\"variable_name\", \"wan_ip\");"
+							"pm.variables.set(\"var_name\", \"wan_ip\");",
+							"pm.variables.set(\"var_value\", \"1.2.3.4\");"
 						],
 						"type": "text/javascript",
 						"packages": {}
@@ -191,7 +192,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"id\": 1, \n    \"method\": \"set\", \n    \"params\":[\n    { \n        \"data\": { \n            \"_scope\": { \n                \"name\": \"model222\", \n                \"vdom\": \"global\", \n                \"vdom_oid\": 1\n            }, \n                \"value\": \"2.2.2.2\"\n        },\n        \"url\": \"/pm/config/adom/root/obj/fmg/variable/{{variable_name}}/dynamic_mapping\"\n    }\n  ],\n  \"verbose\": 1\n}\n",
+					"raw": "{\n    \"id\": 1, \n    \"method\": \"set\", \n    \"params\":[\n    { \n        \"data\": { \n            \"_scope\": { \n                \"name\": \"model222\", \n                \"vdom\": \"global\", \n                \"vdom_oid\": 1\n            }, \n                \"value\": \"{{var_value}}\"\n        },\n        \"url\": \"/pm/config/adom/root/obj/fmg/variable/{{var_name}}/dynamic_mapping\"\n    }\n  ],\n  \"verbose\": 1\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
