@@ -163,6 +163,19 @@
 		},
 		{
 			"name": "set metadata",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "44dc6531-6c8f-41de-b9e6-001bbad06ff5",
+						"exec": [
+							"pm.variables.set(\"variable_name\", \"wan_ip\");"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
 			"id": "e5bbb445-33a3-4e89-a0ee-f609fc8b644c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -178,7 +191,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"id\": 3,\n  \"method\": \"get\",\n  \"params\": [\n    {\n        \"loadsub\": 0,\n        \"url\": \"/dvmdb/device\"\n    }\n  ],\n  \"verbose\": 1\n}\n",
+					"raw": "{\n    \"id\": 1, \n    \"method\": \"set\", \n    \"params\":[\n    { \n        \"data\": { \n            \"_scope\": { \n                \"name\": \"model222\", \n                \"vdom\": \"global\", \n                \"vdom_oid\": 1\n            }, \n                \"value\": \"2.2.2.2\"\n        },\n        \"url\": \"/pm/config/adom/root/obj/fmg/variable/{{variable_name}}/dynamic_mapping\"\n    }\n  ],\n  \"verbose\": 1\n}\n",
 					"options": {
 						"raw": {
 							"language": "json"
